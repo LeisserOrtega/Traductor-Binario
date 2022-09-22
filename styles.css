@@ -1,0 +1,19 @@
+body {
+    background-color: darkslategray;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textobinario {
+    color: black;
+    border: 3px solid rgb(179, 179, 179);
+}
+
+textarea::placeholder{
+    color: black;
+}
