@@ -1,19 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}   
 body {
-    background-color: darkslategray;
+    background-color: rgb(255, 255, 255);
     text-align: center;
 }
 
-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#contenido-body{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 30px;
+    padding: 10px;
+}
+
+#contenido-body>div{
+    margin-top: 30px;
+    border-top: 2px solid black;
 }
 
 #textobinario {
     color: black;
     border: 3px solid rgb(179, 179, 179);
 }
+#textobinario::placeholder{
+    color: rgba(128, 128, 128, 0.49);
+}
+#resultado {
+    color: black;
+    border: 3px solid rgb(179, 179, 179);
+}
+#resultado::placeholder{
+    color: rgba(128, 128, 128, 0.49);
+}
 
 textarea::placeholder{
     color: black;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+    color: white;
+}
+
+footer{
+    height: 80px;;
+    background-color: black;
+    display: flex;
+    text-align: center;
+    justify-self: center;
+}
+
+#text-boxes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 70vh;
+    margin-left: 50px;
+}
+
+.text-box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tablas-de-valor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#tablas-de-valor>div{
+    margin-left: 10px;
 }
