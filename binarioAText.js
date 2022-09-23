@@ -17,6 +17,7 @@ let letraEnBinario = ''
 function binarioATexto (){
     let palabraEnBinarioHtml = document.getElementById('textobinario').value
     if(palabraEnBinarioHtml === ''){
+        
     }
     else{
     const palabraEnBinario = palabraEnBinarioHtml.replace(/ /g,'')
