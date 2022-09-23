@@ -21,7 +21,6 @@ function binarioATexto (){
     let sumador =0
     let contador 
     binarioEnArreglo = palabraEnBinario.match(/.{1,8}/g);
-    console.log(binarioEnArreglo)
     let arregloDeLetras = []
     
     binarioEnArreglo.forEach(letra => {
@@ -60,8 +59,6 @@ function binarioATexto (){
             }
          
         }
-            console.log(arregloDeLetras)
-        	console.log(total)
             // let palabraFinal = palabraFinal + diccionarioPalabras[total]
 						// palabraFinal = palabraFinal + diccionarioPalabras[total]
                        
@@ -74,7 +71,6 @@ function binarioATexto (){
     })
     resultado = document.getElementById('resultado')
     resultado.innerHTML = palabraFinal
-	console.log(palabraFinal)
     palabraFinal = ' '
 }
 
@@ -82,28 +78,26 @@ function binarioATexto (){
 
 function textoABinario (){
     let palabraEnBinarioHtml = document.getElementById('textobinario').value
-    const palabraEnBinario = palabraEnBinarioHtml.replace(/ /g,'')
+    let letraEnBinario = ''
+    let maskedBinary = ''
+    let palabraFinal = ''
+    const palabraEnBinario = palabraEnBinarioHtml
     let binarioEnArreglo = []
     let sumador =0
     let contador 
     binarioEnArreglo = palabraEnBinario.match(/.{1,1}/g);
-    console.log(binarioEnArreglo)
     let arregloDeLetras = []
     binarioEnArreglo.forEach(letra => {
         
-        letraEnBinario = letraEnBinario + letra.charCodeAt(0).toString(2)
-        console.log(letraEnBinario)
-
+        letraEnBinario = letra.charCodeAt(0).toString(2)
+      	arregloDeLetras = letraEnBinario
+        // console.log('Tu letra en Binario es: ' + letraEnBinario)
+      	maskedBinary = letraEnBinario.length < 8 ? letraEnBinario.padStart(8, '0') : letraEnBinario
+      	palabraFinal = palabraFinal + maskedBinary
+      	
     })
     resultado = document.getElementById('resultado')
-    resultado.innerHTML = letraEnBinario
-	console.log(letraEnBinario)
-    letraEnBinario = ' '
+    resultado.innerHTML = palabraFinal
+    palabraFinal = ' '
 }
 
-
-// for(let i=0; i=8;i++){
-//     if (arregloDeLetras[i] = 1){
-//         console.log(i + 'valor')
-//     }
-// }
